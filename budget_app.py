@@ -18,9 +18,9 @@ def main():
             break
 
     line_items = budgetize(savings_level, income)
-    for line in line_items: 
-        print(f'{line}: ${line_items[line]:.2f}')
-        print()
+    with open('budget', 'w') as f: 
+        for line in line_items: 
+            f.writelines(f'{line}: ${line_items[line]:.2f}\n\n')
 
 def budgetize(level, income):
     income /= 12 
