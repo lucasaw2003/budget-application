@@ -1,6 +1,8 @@
-def main(): 
+def main():
+    print('welcome to the budget app! please select a savings level ranging from 1 to 3. 1 is low savings, 3 is high savings.')
 
-    while True: 
+    while True:
+        
         try: 
             savings_level = int(input('please enter a savings level: '))
             assert savings_level in [1, 2, 3]
